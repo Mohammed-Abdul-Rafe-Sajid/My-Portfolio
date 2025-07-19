@@ -343,24 +343,29 @@ footer p {
 
 @media (max-width: 768px) {
   /* NAVBAR */
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    background: #1e1e1e;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    padding: 20px;
-    border-radius: 0 0 0 10px;
-    z-index: 1000;
-  transition: all 0.3s ease;
-  opacity: 0;
-  pointer-events: none;
-  }
+.nav-links {
+  display: none;
+  flex-direction: column;
+  background: #1e1e1e;
+  position: absolute;
+  top: 60px;
+  left: 0; /* changed from right: 0 */
+  width: 100%; /* optional: full width */
+  padding: 20px;
+  border-radius: 0 0 10px 10px;
+  z-index: 1000;
+}
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
 
   .nav-links.active {
     display: flex;
       opacity: 1;
+        flex-direction: column;
+
   pointer-events: auto;
   }
 
@@ -368,8 +373,8 @@ footer p {
 
 
   .hamburger {
-    display: none;
-    font-size: 1.8rem;
+    display: block;
+    font-size: 24px;
     cursor: pointer;
     color: white;
     margin-right: 15px;
