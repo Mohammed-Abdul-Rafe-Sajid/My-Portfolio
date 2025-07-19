@@ -38,8 +38,23 @@ header {
 .nav-links {
   list-style: none;
   display: flex;
+   
   gap: 20px;
+    position: fixed;
+  top: 3.5rem; /* pushes menu below hamburger */
+  left: 0;
+  width: 100%;
+  background-color: #111;
+  z-index: 999;
 }
+.nav-links.active {
+  z-index: 1000;
+  position: fixed; /* ensure it overlays properly */
+}
+.nav-links a:first-child {
+  margin-top: 2rem; /* or try 3rem if needed */
+}
+
 
 .nav-links li a {
   color: #fff;
@@ -56,6 +71,14 @@ header {
   font-size: 24px;
   color: white;
   cursor: pointer;
+    z-index: 1100; /* higher than .nav-links to keep it clickable */
+  position: relative;
+    
+ 
+  
+  top: 1rem;
+  right: 1rem;
+  z-index: 1001; /* Stay on top */
 }
 
 .hero {
@@ -362,6 +385,16 @@ footer p {
     z-index: 1000;
     background-color: #111; /* or whatever your navbar background is */
     width: 100vw;
+
+    display: none;
+    flex-direction: column;
+    
+ 
+    top: 3.5rem; /* Below hamburger */
+    right: 0;
+ 
+    padding: 1rem;
+
   }
 }
 

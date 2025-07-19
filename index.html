@@ -493,6 +493,21 @@ I’m a third-year Information Technology student at CBIT, Hyderabad, with a str
       nav.classList.remove("active");
     }
   });
+  document.querySelectorAll(".nav-links a").forEach(link => {
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
+    const targetId = link.getAttribute("href");
+    const target = document.querySelector(targetId);
+
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth" });
+      setTimeout(() => {
+        document.querySelector(".nav-links").classList.remove("active");
+      }, 500); // delay to allow scrolling before closing
+    }
+  });
+});
+
 </script>
 
 
