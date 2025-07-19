@@ -1,4 +1,13 @@
 /* Dark Theme Portfolio CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
 
 body {
   margin: 0;
@@ -378,13 +387,14 @@ footer p {
     z-index: 1001; /* keeps it above the nav */
   }
 
+
   .nav-links {
     position: absolute;
     top: 100%;
     right: 0;
     z-index: 1000;
     background-color: #111; /* or whatever your navbar background is */
-    width: 100vw;
+    width: 100%;
 
     display: none;
     flex-direction: column;
