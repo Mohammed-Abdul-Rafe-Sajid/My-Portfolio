@@ -18,12 +18,21 @@ header {
   position: sticky;
   top: 0;
   z-index: 999;
+
+    position: fixed;
+  
+  width: 100%;
+ 
+}
+.hero, .about, .projects {
+  padding-top: 60px; /* adjust as per your header height */
 }
 
 .logo {
   font-size: 24px;
   font-weight: 600;
   color: #00adb5;
+
 }
 
 .nav-links {
@@ -338,6 +347,21 @@ footer p {
 @media (max-width: 480px) {
   .contact-box {
     padding: 10px;
+  }
+}
+@media (max-width: 768px) {
+  .hamburger {
+    position: relative;
+    z-index: 1001; /* keeps it above the nav */
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    z-index: 1000;
+    background-color: #111; /* or whatever your navbar background is */
+    width: 100vw;
   }
 }
 

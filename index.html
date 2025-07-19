@@ -483,5 +483,18 @@ I’m a third-year Information Technology student at CBIT, Hyderabad, with a str
     <script>
       AOS.init();
     </script>
+
+<script>
+  document.addEventListener("click", function (event) {
+    const nav = document.querySelector(".nav-links");
+    const burger = document.querySelector(".hamburger");
+
+    if (!nav.contains(event.target) && !burger.contains(event.target)) {
+      nav.classList.remove("active");
+    }
+  });
+</script>
+
+
   </body>
 </html>
